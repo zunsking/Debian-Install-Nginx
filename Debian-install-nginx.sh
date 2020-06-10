@@ -26,7 +26,7 @@ mkdir /etc/nginx/vhost -p
 #添加虚拟主机支持
 cp /etc/nginx/nginx.conf /etc/nginx/nginx.conf.bak
 wget -q -O nginx.conf https://raw.githubusercontent.com/zunsking/Debian-Install-Nginx/master/nginx.conf
-/cp nginx.conf /etc/nginx/
+\cp nginx.conf /etc/nginx/
 #注册系统服务
 cat >/lib/systemd/system/nginx.service << EOF
 [Unit]
