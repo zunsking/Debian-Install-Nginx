@@ -1,5 +1,5 @@
 #!/bin/bash
-#更新系统
+#更新系统软件
 apt update && apt upgrade -y
 #安装依赖环境
 apt-get install build-essential libpcre3 libpcre3-dev libssl-dev git zlib1g-dev -y
@@ -23,6 +23,8 @@ cd ~
 ln -s /usr/lib/nginx/modules /etc/nginx/modules
 mkdir /var/cache/nginx -p
 mkdir /etc/nginx/vhost -p
+wget -q -O nginx.conf https://raw.githubusercontent.com/zunsking/Debian-Install-Nginx/master/nginx.conf
+/cp nginx.conf /etc/nginx/
 #注册系统服务
 cat >/lib/systemd/system/nginx.service << EOF
 [Unit]
