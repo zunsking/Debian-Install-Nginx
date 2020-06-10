@@ -6,7 +6,7 @@ apt-get install build-essential libpcre3 libpcre3-dev libssl-dev git zlib1g-dev 
 #添加用户
 adduser --system --home /nonexistent --shell /bin/false --no-create-home --gecos "nginx user" --group --disabled-login --disabled-password nginx
 cd ~ 
-#取得模块文件
+#取得模块文件及Nginx源码
 git clone git://github.com/FRiCKLE/ngx_cache_purge.git
 git clone git://github.com/yaoweibin/ngx_http_substitutions_filter_module
 wget https://ftp.pcre.org/pub/pcre/pcre-8.43.tar.gz && tar xzvf pcre-8.43.tar.gz
@@ -23,6 +23,8 @@ cd ~
 ln -s /usr/lib/nginx/modules /etc/nginx/modules
 mkdir /var/cache/nginx -p
 mkdir /etc/nginx/vhost -p
+#添加虚拟主机支持
+cp /etc/nginx/nginx.conf /etc/nginx/nginx.conf.bak
 wget -q -O nginx.conf https://raw.githubusercontent.com/zunsking/Debian-Install-Nginx/master/nginx.conf
 /cp nginx.conf /etc/nginx/
 #注册系统服务
