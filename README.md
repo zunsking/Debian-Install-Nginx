@@ -88,4 +88,5 @@ Nginx主配置文件目录：
 </pre>
 <br><br><br>
 <b>参考链接</b><br>
+<li>https://www.vultr.com/docs/how-to-compile-nginx-from-source-on-debian-10</li>
 <li>https://www.iamhippo.com/2019-12/1196.html</li>
