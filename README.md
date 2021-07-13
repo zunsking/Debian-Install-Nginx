@@ -13,8 +13,7 @@ screen -S nginx
 再执行Nginx一键安装脚本
 
 <pre>
-wget https://raw.githubusercontent.com/zunsking/Debian-Install-Nginx/master/Debian-install-nginx.sh
-bash Debian-install-nginx.sh
+bash <(wget -qO- https://raw.githubusercontent.com/zunsking/Debian-Install-Nginx/master/Debian-install-nginx.sh)
 </pre>
 </br>
 Nginx主配置文件目录：
